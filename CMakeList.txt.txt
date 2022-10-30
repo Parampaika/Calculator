@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.8)
+
+project(calc)
+
+add_executable(calc main.cpp Calc.cpp Calc.h  generic_interface.h main.cpp simple_operation.cpp simple_operation.h)
+
+if (CMAKE_VERSION VERSION_GREATER 3.12)
+  set_property(TARGET calc PROPERTY CXX_STANDARD 20)
+endif()
